@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- 
+Nama: Averrous Saloom
+NIM: 16520480 
+-->
+<!-- 
+Fitur tambahan:
+Background bisa menjadi dark-mode. Tidak bisa kembali light. 
+-->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Google</title>
+    <link rel="shortcut icon" href="./assets/icons/google-favicon.svg" type="image/x-icon">
 </head>
+
+
+
 <body>
     <nav>
-        <a href="">Gmail</a>
-        <a href="">Images</a>
+        <a href="https://mail.google.com/" id="gmail">Gmail</a>
+        <a href="https://www.google.co.id/imghp" id="gimg">Images</a>
+        <button class="button" id="dark-light"
+            onclick="document.body.style.backgroundColor='black';document.body.style.color='white';document.querySelector('#input-text').style.color='white';document.querySelector('.search-icon').style.backgroundColor='white';document.querySelector('.mic-icon').style.backgroundColor='white'; document.querySelector('#gmail').style.color='white';document.querySelector('#gimg').style.color='white';">Dark
+            Mode</button>
         <img src="" alt="">
         <img src="" alt="">
     </nav>
 
     <form action="" class="search-form">
-        <img src="" alt="" class="main-logo"/>
-        <div class="search-input">
-            <input type="text">
+        <img src="./assets/google-logo.png" alt="" class="main-logo" />
+        <div class="search-input" id="search-input">
+            <input type="text" id="input-text" />
+            <img src="./assets/icons/search-24px.svg" alt="" class="search-icon">
+            <img src="./assets/icons/mic-24px.svg" alt="" class="mic-icon" />
         </div>
         <div class="search-buttons">
-            <button>
+            <button type="button" class="button"
+                onclick="window.open('https://www.google.com/search?q='+document.querySelector('#input-text').value,'_top')">
                 Google Search
             </button>
-            <button>
+            <button class="button">
                 I'm Feeling Lucky
             </button>
         </div>
-        <p>Google offered in: <a href=""></a>  <a href=""></a></p>
+        <p class="bahasa">Google offered in: <a href="">Indonesia</a> <a href="">Basa Bali</a></p>
     </form>
 
-    <footer>
-        oke
-    </footer>
 </body>
+
 </html>
